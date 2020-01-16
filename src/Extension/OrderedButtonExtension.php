@@ -20,6 +20,15 @@ use Symfony\Component\Form\Extension\Core\Type\ButtonType;
  */
 class OrderedButtonExtension extends AbstractOrderedExtension
 {
+
+    /**
+     * @inheritDoc
+     */
+    public static function getExtendedTypes(): iterable
+    {
+        return [ButtonType::class];
+    }
+
     /**
      * {@inheritdoc}
      */

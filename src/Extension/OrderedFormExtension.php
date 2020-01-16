@@ -20,6 +20,14 @@ use Symfony\Component\Form\Extension\Core\Type\FormType;
 class OrderedFormExtension extends AbstractOrderedExtension
 {
     /**
+     * @inheritDoc
+     */
+    public static function getExtendedTypes(): iterable
+    {
+        return [FormType::class];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getExtendedType()
